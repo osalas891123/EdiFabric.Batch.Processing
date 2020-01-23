@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Batch.Processing", "EdiFabric.Batch.Processing\EdiFabric.Batch.Processing.csproj", "{53DD5272-D289-43DE-89DC-491E0392C773}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EdiFabric.Batch.Processing", "EdiFabric.Batch.Processing\EdiFabric.Batch.Processing.csproj", "{53DD5272-D289-43DE-89DC-491E0392C773}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Batch.Processing.Contracts", "EdiFabric.Batch.Processing.Contracts\EdiFabric.Batch.Processing.Contracts.csproj", "{09DB6423-11E6-45BE-8BD2-2DE86AA82284}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Batch.Processing.Tests.Unit", "EdiFabric.Batch.Processing.Tests.Unit\EdiFabric.Batch.Processing.Tests.Unit.csproj", "{310C40E8-ADBF-4B79-9273-BC744F23DD9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdiFabric.Batch.Processing.Services", "EdiFabric.Batch.Processing.Services\EdiFabric.Batch.Processing.Services.csproj", "{556EFD5E-2089-4F6B-8407-4AD34636878F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{53DD5272-D289-43DE-89DC-491E0392C773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53DD5272-D289-43DE-89DC-491E0392C773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53DD5272-D289-43DE-89DC-491E0392C773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09DB6423-11E6-45BE-8BD2-2DE86AA82284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DB6423-11E6-45BE-8BD2-2DE86AA82284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DB6423-11E6-45BE-8BD2-2DE86AA82284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DB6423-11E6-45BE-8BD2-2DE86AA82284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{310C40E8-ADBF-4B79-9273-BC744F23DD9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{310C40E8-ADBF-4B79-9273-BC744F23DD9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{310C40E8-ADBF-4B79-9273-BC744F23DD9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{310C40E8-ADBF-4B79-9273-BC744F23DD9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556EFD5E-2089-4F6B-8407-4AD34636878F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556EFD5E-2089-4F6B-8407-4AD34636878F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556EFD5E-2089-4F6B-8407-4AD34636878F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556EFD5E-2089-4F6B-8407-4AD34636878F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
