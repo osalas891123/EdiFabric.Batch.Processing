@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using EdiFabric.Batch.Processing.Contracts.Application.Contracts.Interfaces;
+using EdiFabric.Core.Model.Edi;
 using EdiFabric.Templates.X12005010;
 
 namespace EdiFabric.Batch.Processing.Services.Services
@@ -8,16 +11,24 @@ namespace EdiFabric.Batch.Processing.Services.Services
     {
         private readonly IFileSystemWrapper _fileSystemWrapper;
         private readonly IAppSettings _appSettings;
+        private readonly IX12ReaderWrapperFactory _x12ReaderWrapperFactory;
 
-        public FileProcessor(IFileSystemWrapper fileSystemWrapper, IAppSettings appSettings)
+        public FileProcessor(IFileSystemWrapper fileSystemWrapper, IAppSettings appSettings, IX12ReaderWrapperFactory x12ReaderWrapperFactory)
         {
             _fileSystemWrapper = fileSystemWrapper;
             _appSettings = appSettings;
+            _x12ReaderWrapperFactory = x12ReaderWrapperFactory;
         }
 
         public IEnumerable<TS837> GetAllTransactionsFromFile(string file)
         {
-            throw new System.NotImplementedException();
+            var ediItems = Enumerable.Empty<IEdiItem>();
+
+            // Translate EDI file. 
+            using var reader = _x12ReaderWrapperFactory.CreateInstance(file, "PPSC.PVResend.Contracts");
+            ediItems = reader.ReadToEnd();
+
+            return ediItems.OfType<TS837>();
         }
 
         public IEnumerable<string> GetEdiFilesToProcess()

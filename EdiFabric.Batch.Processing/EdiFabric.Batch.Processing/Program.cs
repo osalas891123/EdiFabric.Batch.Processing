@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using EdiFabric.Batch.Processing.Contracts.Application.Contracts.Interfaces;
 using EdiFabric.Batch.Processing.Contracts.Application.Contracts.Models;
 using EdiFabric.Batch.Processing.Contracts.Application.Enums;
+using EdiFabric.Batch.Processing.Contracts.Application.Factories;
 using EdiFabric.Batch.Processing.Contracts.Application.Helpers;
 using EdiFabric.Batch.Processing.Contracts.Application.Wrappers;
 using EdiFabric.Batch.Processing.Services.Services;
@@ -67,6 +68,8 @@ namespace EdiFabric.Batch.Processing
             // Add scoped.
             services.AddScoped<IFileProcessor, FileProcessor>();
             services.AddScoped<IFileSystemWrapper, FileSystemWrapper>();
+            services.AddScoped<IX12ReaderWrapper, X12ReaderWrapper>();
+            services.AddScoped<IX12ReaderWrapperFactory, X12ReaderWrapperFactory>();
 
             // Add singletons.
             services.AddSingleton<IAppSettings>(configuration.GetSection(nameof(AppSettings)).Get<AppSettings>());

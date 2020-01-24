@@ -22,6 +22,12 @@ namespace EdiFabric.Batch.Processing.Tests.Unit.Services
         }
 
         [Fact]
+        public void FileProcessor_GetAllTransactionsFromFile_Returns_Collection_Type_TS837()
+        {
+
+        }
+
+        [Fact]
         public void FileProcessor_GetEdiFilesToProcess_Files_Exist_Return_Files()
         {
             // arrange
@@ -41,7 +47,7 @@ namespace EdiFabric.Batch.Processing.Tests.Unit.Services
         }
 
         [Fact]
-        public void FileProcessor_GetEdiFilesToProcess_Not_Valid_Exist_Return_Empty()
+        public void FileProcessor_GetEdiFilesToProcess_Not_Exist_Return_Empty()
         {
             // arrange
             var files = new string[] { };
