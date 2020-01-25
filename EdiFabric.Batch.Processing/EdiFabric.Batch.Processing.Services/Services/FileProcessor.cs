@@ -25,7 +25,7 @@ namespace EdiFabric.Batch.Processing.Services.Services
             var ediItems = Enumerable.Empty<IEdiItem>();
 
             // Translate EDI file. 
-            using var reader = _x12ReaderWrapperFactory.CreateInstance(file, "PPSC.PVResend.Contracts");
+            using var reader = _x12ReaderWrapperFactory.CreateInstance(file, "EdiFabric.Batch.Processing.Contracts");
             ediItems = reader.ReadToEnd();
 
             return ediItems.OfType<TS837>();
