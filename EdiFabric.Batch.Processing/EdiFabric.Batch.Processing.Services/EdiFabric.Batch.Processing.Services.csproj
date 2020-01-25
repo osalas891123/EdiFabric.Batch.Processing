@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EdiFabric.Core" Version="9.8.7.2" />
+    <PackageReference Include="EdiFabric.Framework" Version="9.8.7.2" />
+    <PackageReference Include="EdiFabric.Plugins.Ack.Edifact" Version="9.8.7.2" />
+    <PackageReference Include="EdiFabric.Plugins.Ack.X12" Version="9.8.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EdiFabric.Batch.Processing.Contracts\EdiFabric.Batch.Processing.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

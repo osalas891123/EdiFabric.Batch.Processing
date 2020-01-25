@@ -11,6 +11,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EdiFabric.Batch.Processing.Contracts\EdiFabric.Batch.Processing.Contracts.csproj" />
+    <ProjectReference Include="..\EdiFabric.Batch.Processing.Services\EdiFabric.Batch.Processing.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
