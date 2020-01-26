@@ -9,6 +9,7 @@
     <PackageReference Include="EdiFabric.Framework" Version="9.8.7.2" />
     <PackageReference Include="EdiFabric.Plugins.Ack.Edifact" Version="9.8.7.2" />
     <PackageReference Include="EdiFabric.Plugins.Ack.X12" Version="9.8.7.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
   </ItemGroup>
 
   <ItemGroup>

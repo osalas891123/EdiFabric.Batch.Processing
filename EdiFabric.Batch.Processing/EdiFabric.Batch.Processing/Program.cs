@@ -40,6 +40,8 @@ namespace EdiFabric.Batch.Processing
                 using (serviceProvider as IDisposable)
                 {
                     _logger.Info("Application processing.");
+                    var supervisor = serviceProvider.GetService<ISupervisor>();
+                    result = await supervisor.SuperviseWork();
                 }
 
                 stopwatch.Stop();
@@ -66,6 +68,7 @@ namespace EdiFabric.Batch.Processing
             var services = new ServiceCollection();
 
             // Add scoped.
+            services.AddScoped<ISupervisor, Supervisor>();
             services.AddScoped<IFileProcessor, FileProcessor>();
             services.AddScoped<IFileSystemWrapper, FileSystemWrapper>();
             services.AddScoped<IX12ReaderWrapper, X12ReaderWrapper>();
